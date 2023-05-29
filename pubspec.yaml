@@ -1,0 +1,72 @@
+name: reservations_app
+description: A new Flutter project.
+publish_to: 'none' 
+version: 1.0.0+1
+environment:
+  sdk: '>=2.19.4 <3.0.0'
+
+
+dependencies:
+  flutter:
+    sdk: flutter
+  intl: ^0.17.0 
+  flutter_localizations: 
+    sdk: flutter         
+  cupertino_icons: ^1.0.2
+  flutter_bloc: ^8.1.2
+  bloc: ^8.1.1
+  flutter_screenutil: ^5.7.0
+  flutter_svg: ^2.0.5
+  loading_overlay: ^0.3.0
+  image_picker: ^0.8.7+4
+  day_night_time_picker: ^1.2.0+2
+  firebase_core: ^2.13.0
+  firebase_auth: ^4.6.1
+  firebase_storage: ^11.2.1
+  cloud_firestore: ^4.7.1
+  lottie: ^2.3.2
+  shared_preferences: ^2.1.1
+  pull_to_refresh: ^2.0.0
+  firebase_messaging: ^14.6.1
+  flutter_local_notifications: ^14.1.0
+  http: ^0.13.6
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+  flutter_launcher_icons: "^0.13.1"
+
+flutter_launcher_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/images/ic_app_launcher.png"
+  min_sdk_android: 21 # android min sdk min:16, default 21
+
+
+flutter:
+  generate: true 
+  uses-material-design: true
+
+  assets:
+    - assets/fonts/
+    - assets/fonts/montasrat/
+    - assets/images/
+    
+  fonts:
+    - family: Montserrat
+      fonts:
+        - asset: assets/fonts/montasrat/Montserrat-Arabic Regular 400.otf
+          weight: 400
+        - asset: assets/fonts/montasrat/Montserrat-Arabic Black 900.otf
+          weight: 900
+        - asset: assets/fonts/montasrat/Montserrat-Arabic Bold 700.otf
+          weight: 700
+        - asset: assets/fonts/montasrat/Montserrat-Arabic ExtraBold 800.otf
+          weight: 800
+        - asset: assets/fonts/montasrat/Montserrat-Arabic SemiBold 600.otf
+          weight: 600
+        - asset: assets/fonts/montasrat/Montserrat-Arabic Medium 500.otf
+          weight: 500
+        - asset: assets/fonts/montasrat/Montserrat-Arabic Light 300.otf
+          weight: 300
