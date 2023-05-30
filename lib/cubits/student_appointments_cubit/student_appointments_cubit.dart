@@ -247,6 +247,7 @@ class StudentAppointmentsCubit extends Cubit<StudentAppointmentsState> {
     String? desc,
     String expectTime,
   ) async {
+    //!2
     String id = listReservations[index].id!;
     bool updated = await FbFirestoreController().updateAppointment(
       id: id,
@@ -268,6 +269,7 @@ class StudentAppointmentsCubit extends Cubit<StudentAppointmentsState> {
       emit(StudentAppointmentsInitial());
     }
   }
+  //!1
 
   Future sendRequestAppo2(
     BuildContext context,
@@ -283,7 +285,9 @@ class StudentAppointmentsCubit extends Cubit<StudentAppointmentsState> {
       data: {
         'desc': desc == "" ? null : desc,
         'title': title,
+        'status': StatusAppo.PENDING.toString(),
         'expectedTime': expectTime,
+        'idStudent': AuthCubit.get(context).user!.id,
         'student': AuthCubit.get(context).user!.toMap(),
       },
     );
