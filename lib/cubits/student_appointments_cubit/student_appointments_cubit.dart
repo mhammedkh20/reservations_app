@@ -393,20 +393,45 @@ class StudentAppointmentsCubit extends Cubit<StudentAppointmentsState> {
     DateFormat dateFormat3 = DateFormat.yMMMMd('en');
     DateFormat dateFormat = DateFormat.EEEE('ar');
     DateFormat dateFormat2 = DateFormat.Md('en');
-    for (int i = 0; i < numOfDays; i++) {
-      DateTime date = now.add(Duration(days: i));
-      String s = dateFormat.format(date);
-      if (s == 'الجمعة') {
-        break;
-      } else {
-        allDate.add(
-          CustomClassDate(
-            currentDateTime: date,
-            dayOfWeek: s,
-            todayDate: dateFormat2.format(date),
-            listAppo: [],
-          ),
-        );
+    String dateTimeNow = dateFormat.format(DateTime.now());
+    if (dateTimeNow == 'الخميس' || dateTimeNow == 'الجمعة') {
+      int isBraek = 0;
+      for (int i = 0; i < 5; i++) {
+        DateTime date = now.add(Duration(days: i));
+        String s = dateFormat.format(date);
+        if (s == 'الجمعة') {
+          if (isBraek == 1) {
+            break;
+          } else {
+            isBraek = isBraek + 1;
+          }
+        } else {
+          allDate.add(
+            CustomClassDate(
+              currentDateTime: date,
+              dayOfWeek: s,
+              todayDate: dateFormat2.format(date),
+              listAppo: [],
+            ),
+          );
+        }
+      }
+    } else {
+      for (int i = 0; i < numOfDays; i++) {
+        DateTime date = now.add(Duration(days: i));
+        String s = dateFormat.format(date);
+        if (s == 'الجمعة') {
+          break;
+        } else {
+          allDate.add(
+            CustomClassDate(
+              currentDateTime: date,
+              dayOfWeek: s,
+              todayDate: dateFormat2.format(date),
+              listAppo: [],
+            ),
+          );
+        }
       }
     }
     QuerySnapshot<Map<String, dynamic>> appointments =

@@ -25,37 +25,21 @@ class AppColors {
   static Color pink100 = pink.withOpacity(.1);
   static Color pink300 = pink.withOpacity(.3);
   static Color pink400 = pink.withOpacity(.4);
-  static const Color BASE_COLOR = Color(0xff0473C0);
-
-  // static const MaterialColor App_THEME = MaterialColor(
-  //   0xffD91A2E,
-  //   <int, Color>{
-  //     50: Color(0xFFECD1D4),
-  //     100: Color(0xFFEEB1B7),
-  //     200: Color(0xFFE8858F),
-  //     300: Color(0xFFE35968),
-  //     400: Color(0xFFE03B4C),
-  //     500: Color(0xffc92b3c),
-  //     600: Color(0xFFC91729),
-  //     700: Color(0xFFAD1122),
-  //     800: Color(0xFFA61120),
-  //     900: Color(0xFF830916),
-  //   },
-  // );
+  static const Color BASE_COLOR = Color(0xff0f3054);
 
   static const MaterialColor App_THEME = MaterialColor(
-    0xff0473C0,
+    0xff0f3054,
     <int, Color>{
-      50: Color(0xFFCEDDE8),
-      100: Color(0xFFACD0E8),
-      200: Color(0xFF82BBE3),
-      300: Color(0xFF56A5DC),
-      400: Color(0xFF3897D9),
-      500: Color(0xff2883c2),
-      600: Color(0xFF167CC4),
-      700: Color(0xFF1069A8),
-      800: Color(0xFF11659F),
-      900: Color(0xFF084D7C),
+      50: Color(0xFFC4D1E0),
+      100: Color(0xFFA3BFDE),
+      200: Color(0xFF79A6D7),
+      300: Color(0xFF508ED2),
+      400: Color(0xFF357FD0),
+      500: Color(0xff2469b4),
+      600: Color(0xFF1461B6),
+      700: Color(0xFF0E5098),
+      800: Color(0xFF0F4D91),
+      900: Color(0xFF06386E),
     },
   );
 }

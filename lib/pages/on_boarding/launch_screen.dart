@@ -54,7 +54,7 @@ class _LaunchScreenState extends State<LaunchScreen> {
             height: 20.h,
             width: double.infinity,
           ),
-          MyText(title: 'زميل الدراسة')
+          MyText(title: 'ASUBooking')
         ],
       ),
     );
