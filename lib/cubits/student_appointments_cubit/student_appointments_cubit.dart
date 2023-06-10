@@ -391,25 +391,29 @@ class StudentAppointmentsCubit extends Cubit<StudentAppointmentsState> {
     DateTime now = DateTime.now();
 
     DateFormat dateFormat3 = DateFormat.yMMMMd('en');
-    DateFormat dateFormat = DateFormat.EEEE('ar');
+    DateFormat dateFormatAr = DateFormat.EEEE('ar');
+    DateFormat dateFormatEn = DateFormat.EEEE('en');
     DateFormat dateFormat2 = DateFormat.Md('en');
-    String dateTimeNow = dateFormat.format(DateTime.now());
+    String dateTimeNow = dateFormatAr.format(DateTime.now());
     if (dateTimeNow == 'الخميس' || dateTimeNow == 'الجمعة') {
       int isBraek = 0;
-      for (int i = 0; i < 5; i++) {
+      for (int i = 0; i < 7; i++) {
         DateTime date = now.add(Duration(days: i));
-        String s = dateFormat.format(date);
+        String s = dateFormatAr.format(date);
+        String s_en = dateFormatEn.format(date);
         if (s == 'الجمعة') {
           if (isBraek == 1) {
             break;
           } else {
             isBraek = isBraek + 1;
           }
+        } else if (s == 'السبت') {
         } else {
           allDate.add(
             CustomClassDate(
               currentDateTime: date,
-              dayOfWeek: s,
+              dayOfWeekAr: s,
+              dayOfWeekEn: s_en,
               todayDate: dateFormat2.format(date),
               listAppo: [],
             ),
@@ -419,14 +423,17 @@ class StudentAppointmentsCubit extends Cubit<StudentAppointmentsState> {
     } else {
       for (int i = 0; i < numOfDays; i++) {
         DateTime date = now.add(Duration(days: i));
-        String s = dateFormat.format(date);
+        String s = dateFormatAr.format(date);
+        String s_en = dateFormatEn.format(date);
         if (s == 'الجمعة') {
           break;
+        } else if (s == 'السبت') {
         } else {
           allDate.add(
             CustomClassDate(
               currentDateTime: date,
-              dayOfWeek: s,
+              dayOfWeekAr: s,
+              dayOfWeekEn: s_en,
               todayDate: dateFormat2.format(date),
               listAppo: [],
             ),

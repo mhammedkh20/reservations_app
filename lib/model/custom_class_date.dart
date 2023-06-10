@@ -3,12 +3,14 @@ import 'package:reservations_app/model/user_model.dart';
 class CustomClassDate {
   DateTime currentDateTime;
   String todayDate;
-  String dayOfWeek;
+  String dayOfWeekAr;
+  String dayOfWeekEn;
   List<Appointment> listAppo;
 
   CustomClassDate({
     required this.currentDateTime,
-    required this.dayOfWeek,
+    required this.dayOfWeekAr,
+    required this.dayOfWeekEn,
     required this.listAppo,
     required this.todayDate,
   });

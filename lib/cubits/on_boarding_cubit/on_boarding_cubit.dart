@@ -9,17 +9,17 @@ class OnBoardingCubit extends Cubit<OnBoardingState> {
   List<OnBoardingModel> listDataOnBoarding(BuildContext context) {
     return [
       OnBoardingModel(
-        imagePath: 'assets/images/im1.png',
+        imagePath: 'assets/images/onboarding1.jpg',
         title: AppLocalizations.of(context)!.titleOnboarding1,
         desc: AppLocalizations.of(context)!.descOnboarding1,
       ),
       OnBoardingModel(
-        imagePath: 'assets/images/im2.png',
+        imagePath: 'assets/images/onboarding2.jpg',
         title: AppLocalizations.of(context)!.titleOnboarding2,
         desc: AppLocalizations.of(context)!.descOnboarding2,
       ),
       OnBoardingModel(
-        imagePath: 'assets/images/im3.png',
+        imagePath: 'assets/images/onboarding3.jpg',
         title: AppLocalizations.of(context)!.titleOnboarding3,
         desc: AppLocalizations.of(context)!.descOnboarding3,
       ),
