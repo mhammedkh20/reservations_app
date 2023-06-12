@@ -107,7 +107,9 @@ class _LecturerScreenState extends State<LecturerScreen> {
                           borderRadius: 0,
                           child: MyText(
                             title: langAr
-                                ? nextSevenDays[i].dayOfWeekAr
+                                ? nextSevenDays[i].dayOfWeekAr +
+                                    "\n" +
+                                    nextSevenDays[i].todayDate
                                 : nextSevenDays[i].dayOfWeekEn +
                                     "\n" +
                                     nextSevenDays[i].todayDate,
