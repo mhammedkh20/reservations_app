@@ -160,7 +160,6 @@ class NotificationApi {
       headers: <String, String>{
         'Content-Type': 'application/json',
         'Authorization': 'key= ${AppConstantNotification.KEY_SERVER}',
-        'project_id': "AppConstantNotification.SENDER_ID"
       },
       body: dataNotifications,
     );

@@ -66,7 +66,7 @@ class AppHelpers {
         start = date;
       }
       if (s == 'الجمعة') {
-        end = date;
+        end = now.add(Duration(days: 6));
       }
     }
     return {

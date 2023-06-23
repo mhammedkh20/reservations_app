@@ -5,7 +5,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:reservations_app/model/bottom_nav_model.dart';
 import 'package:reservations_app/pages/main/lecturer/bottom_nav/add_appointments.dart';
 import 'package:reservations_app/pages/main/lecturer/bottom_nav/lecturer_profile_personly.dart';
-import 'package:reservations_app/pages/main/lecturer/bottom_nav/reservations.dart';
 import 'package:reservations_app/pages/main/lecturer/bottom_nav/student_appointments.dart';
 import 'package:reservations_app/pages/main/studet/bottom_nav/lecturers.dart';
 import 'package:reservations_app/pages/main/studet/bottom_nav/lecturers_dates.dart';
